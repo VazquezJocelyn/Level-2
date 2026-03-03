@@ -46,8 +46,8 @@ const COLLISION_RECTS = [
 ];
 
 const DLG = {
-  intro:    {t:'welcome!', b:'hi gino, my love <3\n\ni made you a little game (with a lot of effort).\nobjective: explore the map and collect 3 hearts\nhidden in treasure chests.\n\ncome back to me when you\'ve collected all 3.\n\ngood luck!!!'},
-  notYet:   {t:'hey, amor!', b:'you found me! but you need to collect 3 hearts,\nstored in treasure chests across the map,\nin order to win the game.\n\ncome back to me when you\'ve collected all 3.'},
+  intro:    {t:'welcome!', b:'hola gino, mi amor <3\n\ni made you a little game (with a lot of effort).\nobjective: explore the map and collect 3 hearts\nhidden in treasure chests.\n\ncome back to me when you\'ve collected all 3.\n\ngood luck!!!'},
+  notYet:   {t:'hola, amor!', b:'you found me! but you need to collect 3 hearts,\nstored in treasure chests across the map,\nin order to win the game.\n\ncome back to me when you\'ve collected all 3.'},
   c1:       {t:'heart 1/3 💗', b:'first heart collected.\n\ngino, thank you for being kind to me\neven when i was still healing.\n\nyou showed up gently.\nand that mattered more than you know.'},
   c2:       {t:'heart 2/3 💗', b:'second heart collected.\n\nthank you for introducing me to a new world,\ninviting me out,\nand making me feel welcomed.\n\nyou made space for me\nbefore i even knew how to ask for it.'},
   c3:       {t:'heart 3/3 💗', b:'third heart collected.\n\nyou\'ve been consistent.\nrespectful.\nreal.\n\ntwo years later,\nand i still feel lucky\nthat i get to love you.'},
@@ -55,7 +55,7 @@ const DLG = {
   allDone:  {t:'all hearts collected 💌', b:'okay gino…\n\nyou have all 3 hearts now.\n\ncome find me.'},
   success:  {t:'success!!', b:'mission accomplished! 🎮\n\nyou braved the challenges,\ncollected 3 hearts,\nand reached the end.\n\nhappy 2 year anniversary, gino.\nthank you for loving me\nwith effort and intention.\n\nas the ultimate reward,\nhere\'s the final question for you…'},
   question: {t:'final question…', b:'will you keep choosing me? 💗'},
-  yes:      {t:'🥹💞', b:'okay… i\'m gonna cry.\n\ni love you, gino.\nthank you for being my safe place.\n\nyear 3 loading…'},
+  yes:      {t:'🥹💞', b:'okay… i\'m gonna cry.\n\ni te amo, gino.\nthank you for being my safe place.\n\nyear 3 loading…'},
   no:       {t:'be serious 😭', b:'wrong answer, my love.\n\ntry again.'}
 };
 
