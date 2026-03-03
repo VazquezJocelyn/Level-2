@@ -1,0 +1,180 @@
+/* ── Reset & Base ── */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: #0a0a12;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+}
+
+#game-container {
+  position: relative;
+}
+
+canvas {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  display: block;
+}
+
+/* ── HUD ── */
+#hud {
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.65);
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 8px 24px;
+  backdrop-filter: blur(4px);
+}
+
+#hud-hearts {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+/* ── Interaction Prompt ── */
+#interact-prompt {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.7);
+  border: 2px solid rgba(232, 208, 112, 0.4);
+  border-radius: 8px;
+  padding: 6px 18px;
+  color: #e8d070;
+  font-size: 14px;
+  font-weight: 500;
+  animation: prompt-pulse 1.5s ease-in-out infinite;
+  transition: opacity 0.2s;
+}
+
+#interact-prompt kbd {
+  background: rgba(232, 208, 112, 0.2);
+  border: 1px solid rgba(232, 208, 112, 0.4);
+  border-radius: 4px;
+  padding: 1px 6px;
+  font-family: inherit;
+  font-weight: 700;
+}
+
+@keyframes prompt-pulse {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 1; }
+}
+
+/* ── Modal ── */
+#modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 200;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(3px);
+  animation: fade-in 0.25s ease;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+#modal-box {
+  background: #fff;
+  border-radius: 18px;
+  padding: 32px 36px 28px;
+  max-width: 420px;
+  width: 90%;
+  box-shadow:
+    0 8px 32px rgba(0,0,0,0.35),
+    0 0 0 1px rgba(255,255,255,0.1);
+  text-align: center;
+  animation: modal-pop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes modal-pop {
+  from { transform: scale(0.85); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+#modal-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2a2a3a;
+  margin-bottom: 14px;
+}
+
+#modal-body {
+  font-size: 15px;
+  line-height: 1.65;
+  color: #444;
+  margin-bottom: 22px;
+  white-space: pre-line;
+  text-align: left;
+}
+
+#modal-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+#modal-buttons button {
+  padding: 10px 28px;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.12s, box-shadow 0.12s;
+}
+
+#modal-buttons button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+#modal-buttons button:active {
+  transform: translateY(0);
+}
+
+button.btn-primary {
+  background: linear-gradient(135deg, #e87090, #d45070);
+  color: #fff;
+}
+
+button.btn-secondary {
+  background: #f0f0f5;
+  color: #555;
+  border: 1px solid #ddd;
+}
+
+button.btn-yes {
+  background: linear-gradient(135deg, #e87090, #d45070);
+  color: #fff;
+}
+
+button.btn-no {
+  background: #f0f0f5;
+  color: #555;
+  border: 1px solid #ddd;
+}
+
+/* ── Utility ── */
+.hidden {
+  display: none !important;
+}
