@@ -32,7 +32,7 @@ It features:
 
 Once GitHub Pages is enabled:
 
-https://vazquezjocelyn.github.io/Level-2-Us/
+https://vazquezjocelyn.github.io/Level-2/
 
 •·················•·················•·················•
 
